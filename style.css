@@ -1,0 +1,45 @@
+button {
+  margin-right: 10px;
+  width: 150px;
+  font-size: 30px;
+  border: none;
+  background-color: aquamarine;
+  padding: 10px;
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.newClass {
+  background-color: purple;
+  color: white;
+  transition: color 0.5s, background-color 0.5s;
+  /* Scaling button to 0.98 to its original size */
+  transform: scale(0.98);
+  /* Lowering the shadow */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.btnDv {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.textContain {
+  text-align: center;
+  width: 100%;
+  font-size: 1.7em;
+}
+
+p {
+  font-weight: 600;
+}
+
+.divText {
+  width: 50%;
+}
