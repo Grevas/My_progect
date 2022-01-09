@@ -1,3 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(to top left, #99861d, #645c37);
+}
+
 button {
   margin-right: 10px;
   width: 150px;
@@ -30,16 +52,36 @@ button {
   display: none;
 }
 
-.textContain {
-  text-align: center;
-  width: 100%;
-  font-size: 1.7em;
-}
-
 p {
   font-weight: 600;
 }
 
-.divText {
+.divText1,
+.divText2,
+.divText3,
+.divText4 {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 50%;
+  background-color: rgb(160, 184, 55);
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: none;
+    font-size: 70%;
+  }
+  button {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    width: 80px;
+  }
 }
