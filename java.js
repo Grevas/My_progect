@@ -16,7 +16,6 @@ btn1.addEventListener('click', function () {
   btn1.classList.toggle('newClass');
   divText1.classList.toggle('hidden');
   this.setAttribute('onclick', "new Audio('1.mp3').play()");
-  //overlay.classList.toggle('hidden');
   if (!divText2.classList.contains('hidden')) divText2.classList.add('hidden');
   if (!divText3.classList.contains('hidden')) divText3.classList.add('hidden');
   if (!divText4.classList.contains('hidden')) divText4.classList.add('hidden');
@@ -55,7 +54,7 @@ btn4.addEventListener('click', function () {
   this.setAttribute('onclick', "new Audio('1.mp3').play()");
   if (!divText2.classList.contains('hidden')) divText2.classList.add('hidden');
   if (!divText3.classList.contains('hidden')) divText3.classList.add('hidden');
-  if (!divText1.classList.contains('hidden')) hidden.classList.add('hidden');
+  if (!divText1.classList.contains('hidden')) divText1.classList.add('hidden');
   if (btn2.classList.contains('newClass')) btn2.classList.remove('newClass');
   if (btn1.classList.contains('newClass')) btn1.classList.remove('newClass');
   if (btn3.classList.contains('newClass')) btn3.classList.remove('newClass');

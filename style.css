@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  /* box-sizing: inherit; */
 }
 
 html {
@@ -13,9 +13,9 @@ body {
   color: #333;
   line-height: 1.5;
   height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: flex-start;
+  /* position: relative; */
+  /* display: flex; */
+  /* align-items: flex-start; */
   justify-content: center;
   background: linear-gradient(to top left, #99861d, #645c37);
 }
@@ -53,7 +53,7 @@ button {
 }
 
 p {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .divText1,
@@ -65,7 +65,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  /* width: 50%; */
   background-color: rgb(160, 184, 55);
   padding: 6rem;
   border-radius: 5px;
@@ -83,5 +83,18 @@ p {
     font-weight: 400;
     font-size: 17px;
     width: 80px;
+    padding: 1rem;
+  }
+
+  .divText1,
+  .divText2,
+  .divText3,
+  .divText4 {
+    position: relative;
+    left: 10px;
+    width: 90%;
+    transform: translate(0, 0);
+    font-size: 10px;
+    padding: 1rem;
   }
 }
