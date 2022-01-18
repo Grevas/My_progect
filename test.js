@@ -1,6 +1,4 @@
-let clearLet;
-let clear = 0;
-
+const btnDv = document.querySelector('.btnDv');
 const btn = document.querySelectorAll('.btn');
 
 const divText1 = document.querySelector('.divText1');
@@ -8,33 +6,37 @@ const divText2 = document.querySelector('.divText2');
 const divText3 = document.querySelector('.divText3');
 const divText4 = document.querySelector('.divText4');
 
-function handleClick() {
-  if (clear === 1) {
-    clearLet.classList.remove('newClass');
-    clear = 0;
-  } else if (this.classList.contains('newClass')) {
-    this.classList.remove('newClass');
-  }
-  if (!this.classList.contains('newClass')) {
-    this.classList.add('newClass');
-    clearLet = document.querySelector('.newClass');
-    clear++;
-    console.log(clear);
-    if (this.textContent === 'First') {
-      divText1.classList.remove('hidden');
-    } else divText1.classList.add('hidden');
-    if (this.textContent === 'Second') {
-      divText2.classList.remove('hidden');
-    } else divText2.classList.add('hidden');
-    if (this.textContent === 'Third') {
-      divText3.classList.remove('hidden');
-    } else divText3.classList.add('hidden');
-    if (this.textContent === 'Fourth') {
-      divText4.classList.remove('hidden');
-    } else divText4.classList.add('hidden');
-  }
-}
-
-btn.forEach((e) => {
-  e.addEventListener('click', handleClick);
+btnDv.addEventListener('click', (e) => {
+  btn.forEach((btn, i) => {
+    if (
+      btn.textContent === e.target.textContent &&
+      !btn.classList.contains('newClass')
+    ) {
+      console.log(btnDv.innerHTML);
+      btn.classList.add('newClass');
+      i === 0
+        ? divText1.classList.remove('hidden')
+        : divText1.classList.add('hidden');
+      i === 1
+        ? divText2.classList.remove('hidden')
+        : divText2.classList.add('hidden');
+      i === 2
+        ? divText3.classList.remove('hidden')
+        : divText3.classList.add('hidden');
+      i === 3
+        ? divText4.classList.remove('hidden')
+        : divText4.classList.add('hidden');
+    } else if (
+      btn.textContent === e.target.textContent &&
+      btn.classList.contains('newClass')
+    ) {
+      btn.classList.remove('newClass');
+      divText1.classList.add('hidden');
+      divText2.classList.add('hidden');
+      divText3.classList.add('hidden');
+      divText4.classList.add('hidden');
+    } else {
+      btn.classList.remove('newClass');
+    }
+  });
 });

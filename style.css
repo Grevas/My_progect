@@ -1,40 +1,49 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: inherit; */
+  box-sizing: inherit;
 }
 
 html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  color: #333;
-  line-height: 1.5;
-  height: 100vh;
-  /* position: relative; */
-  /* display: flex; */
-  /* align-items: flex-start; */
-  justify-content: center;
-  background: linear-gradient(to top left, #99861d, #645c37);
+h1 {
+  font-size: 26px;
+  font-weight: 500;
 }
 
-button {
+body {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: #9dca96;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.btn {
+  /* position: absolute; */
   margin-right: 10px;
-  width: 150px;
+  width: auto;
   font-size: 30px;
   border: none;
   background-color: aquamarine;
   padding: 10px;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 10px;
   transition: color 0.5s, background-color 0.5s;
 }
 
+.textContain {
+  /* position: relative; */
+  margin: 0;
+  padding: 0;
+}
+
 .newClass {
-  background-color: purple;
+  background-color: rgb(226, 181, 226);
   color: white;
   transition: color 0.5s, background-color 0.5s;
   /* Scaling button to 0.98 to its original size */
@@ -44,16 +53,13 @@ button {
 }
 
 .btnDv {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .hidden {
-  display: none;
-}
-
-p {
-  font-weight: 400;
+  /* display: none; */
+  opacity: 0;
 }
 
 .divText1,
@@ -62,13 +68,14 @@ p {
 .divText4 {
   position: absolute;
   font-size: 20px;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* width: 50%; */
-  background-color: rgb(160, 184, 55);
-  padding: 6rem;
-  border-radius: 5px;
+  /* height: auto; */
+  background-color: rgb(55, 212, 76);
+  padding: 4rem;
+  border-radius: 10px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
@@ -78,11 +85,14 @@ p {
     -webkit-text-size-adjust: none;
     font-size: 70%;
   }
-  button {
-    margin-bottom: 10px;
+  h1 {
+    font-size: 16px;
     font-weight: 400;
-    font-size: 17px;
-    width: 80px;
+  }
+  .btn {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
     padding: 1rem;
   }
 
@@ -90,9 +100,9 @@ p {
   .divText2,
   .divText3,
   .divText4 {
-    position: relative;
+    top: 13%;
     left: 10px;
-    width: 90%;
+    width: 95%;
     transform: translate(0, 0);
     font-size: 10px;
     padding: 1rem;
