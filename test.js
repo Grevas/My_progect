@@ -12,29 +12,20 @@ btnDv.addEventListener('click', (e) => {
       btn.textContent === e.target.textContent &&
       !btn.classList.contains('newClass')
     ) {
-      console.log(btnDv.innerHTML);
       btn.classList.add('newClass');
-      i === 0
-        ? divText1.classList.remove('hidden')
-        : divText1.classList.add('hidden');
-      i === 1
-        ? divText2.classList.remove('hidden')
-        : divText2.classList.add('hidden');
-      i === 2
-        ? divText3.classList.remove('hidden')
-        : divText3.classList.add('hidden');
-      i === 3
-        ? divText4.classList.remove('hidden')
-        : divText4.classList.add('hidden');
+      i === 0 ? (divText1.style.opacity = 1) : (divText1.style.opacity = 0);
+      i === 1 ? (divText2.style.opacity = 1) : (divText2.style.opacity = 0);
+      i === 2 ? (divText3.style.opacity = 1) : (divText3.style.opacity = 0);
+      i === 3 ? (divText4.style.opacity = 1) : (divText4.style.opacity = 0);
     } else if (
       btn.textContent === e.target.textContent &&
       btn.classList.contains('newClass')
     ) {
       btn.classList.remove('newClass');
-      divText1.classList.add('hidden');
-      divText2.classList.add('hidden');
-      divText3.classList.add('hidden');
-      divText4.classList.add('hidden');
+      divText1.style.opacity = 0;
+      divText2.style.opacity = 0;
+      divText3.style.opacity = 0;
+      divText4.style.opacity = 0;
     } else {
       btn.classList.remove('newClass');
     }
